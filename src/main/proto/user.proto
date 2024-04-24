@@ -4,13 +4,13 @@ option java_package = "com.onetwo.rpc.user";
 option java_multiple_files = true;
 
 service User {
-  rpc Greeting(GreetingReq) returns (GreetingRes);
+  rpc getUserNickname(UserId) returns (UserNickname);
 }
 
-message GreetingReq {
-  string some = 1;
+message UserId {
+  string userId = 1;
 }
 
-message GreetingRes {
-  string result = 1;
+message UserNickname {
+  string userNickname = 1;
 }

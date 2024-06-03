@@ -4,13 +4,14 @@ option java_package = "com.onetwo.rpc.user";
 option java_multiple_files = true;
 
 service User {
-  rpc getUserNickname(UserId) returns (UserNickname);
+  rpc getUserInfo(UserId) returns (UserInfo);
 }
 
 message UserId {
   string userId = 1;
 }
 
-message UserNickname {
+message UserInfo {
   string userNickname = 1;
+  string profileImageEndPoint = 2;
 }
